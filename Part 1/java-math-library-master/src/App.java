@@ -1,6 +1,7 @@
 import de.tilman_neumann.util.Multiset;
 import de.tilman_neumann.util.Multiset_HashMapImpl;
 import de.tilman_neumann.util.Pair;
+import de.tilman_neumann.util.StringUtil;
 
 public class App {
     public static void main(String[] args) {
@@ -14,5 +15,8 @@ public class App {
         System.out.println(x);
         System.out.println(m.get("hassann"));
         System.out.println(p.getFirst());
+
+        String res =  StringUtil.repeat("", 2);
+
     }
 }

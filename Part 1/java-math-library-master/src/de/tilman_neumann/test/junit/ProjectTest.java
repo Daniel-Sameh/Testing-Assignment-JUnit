@@ -45,8 +45,11 @@ public class ProjectTest extends TestSuite {
         suite.addTest(de.tilman_neumann.jml.roots.PackageTests.suite());
         suite.addTest(de.tilman_neumann.jml.transcendental.PackageTests.suite());
         // XXX: Add more packages here
-        
-		return suite;
+
+        suite.addTestSuite(de.tilman_neumann.test.junit.util.StringUtilTest.class);
+        suite.addTestSuite(de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.class);
+
+        return suite;
 	}
 	
     /**
