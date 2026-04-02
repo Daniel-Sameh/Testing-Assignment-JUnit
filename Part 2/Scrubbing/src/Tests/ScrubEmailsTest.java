@@ -32,6 +32,18 @@ public class ScrubEmailsTest {
     }
 
     @Test
+    public void test_scrubEmails_emailWithNumbers() {
+        // Arrange
+        IScrubEmails scrubber = new EmailScrubber();
+        String input = "Michael012@mail.com";
+        String expected = "[EMAIL_HIDDEN]";
+        // Act
+        String actual = scrubber.scrub(input);
+        // Assert
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void test_scrubEmails_invalidEmail() {
         // Arrange
         IScrubEmails scrubber = new EmailScrubber();
