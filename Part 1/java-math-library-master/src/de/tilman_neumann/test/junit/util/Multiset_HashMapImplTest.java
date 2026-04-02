@@ -9,9 +9,378 @@ import de.tilman_neumann.test.junit.ClassTest;
 import de.tilman_neumann.util.Multiset_HashMapImpl;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 public class Multiset_HashMapImplTest extends ClassTest {
+
+//====================Add(entry)========================================
+    @Test
+    public void testAdd_notNullAndDoesNotExist() {
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        int actual = multiset.add(2);
+        assertEquals( 0, actual);
+    }
+
+    @Test
+    public void testAdd_notNullAndExists() {
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        int first = multiset.add(2);
+        int second = multiset.add(2);
+        assertEquals( 1, second);
+    }
+
+    @Test
+    public void testAdd_NullAndDoesNotExist() {
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        int actual = multiset.add(null);
+        assertEquals( 0, actual);
+    }
+
+    @Test
+    public void testAdd_NullAndExists() {
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        int first = multiset.add(null);
+        int second = multiset.add(null);
+        assertEquals( 1, second);
+    }
+    //====================Add(entry, mult)========================================
+    @Test
+    public void testAddMult_NotNullAndDoesNotExistAndGT0() {
+        //arrange
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        //act
+        int x = multiset.add(2,2);
+        int y = multiset.add(2,2);
+        //assert
+//        assertEquals(0, x);
+//        assertEquals( 2, y);
+        int[] expected = {0, 2};
+        int[] actual = {x, y};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testAddMult_NotNullAndDoesNotExistAndLTE0() {
+        //arrange
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        //act
+        int x = multiset.add(2,0);
+        int y = multiset.add(2,-5);
+        //assert
+//        assertEquals(0, x);
+//        assertEquals( 0, y);
+        int[] expected = {0,0};
+        int[] actual = {x,y};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testAddMult_NotNullAndExistsAndGT0() {
+        //arrange
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        //act
+        int x = multiset.add(-5);
+        int y = multiset.add(-5,4);
+        int z = multiset.add(-5,2);
+        //assert
+//        assertEquals( 1, y);
+//        assertEquals(5, z);
+        int[] expected = {1, 5};
+        int[] actual = {y,z};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testAddMult_NotNullAndExistsAndLTE0() {
+        //arrange
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        //act
+        int x = multiset.add(-5);
+        int y = multiset.add(-5,0);
+        int z = multiset.add(-5,-2);
+        //assert
+//        assertEquals( 1, y);
+//        assertEquals(1, z);
+        int[] expected = {1, 1};
+        int[] actual = {y,z};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testAddMult_NullAndDoesNotExistAndGT0() {
+        //arrange
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        //act
+        int x = multiset.add(null,6);
+        int y = multiset.add(null,1);
+        //assert
+        int[] expected = {0, 6};
+        int[] actual = {x,y};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testAddMult_NullAndDoesNotExistAndLTE0() {
+        //arrange
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        //act
+        int x = multiset.add(null,0);
+        int y = multiset.add(null,-3);
+        int z = multiset.add(null,-1);
+        //assert
+        int[] expected = {0, 0, 0};
+        int[] actual = {x,y,z};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testAddMult_NullAndExistsAndGT0() {
+        //arrange
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        //act
+        int x = multiset.add(null); //0
+        x = multiset.add(null); //1
+        int y = multiset.add(null, 4); //2
+        int z = multiset.add(null, 2); //6
+        //assert
+        int[] expected = {2, 6};
+        int[] actual = {y, z};
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testAddMult_NullAndExistsAndLTE0() {
+        //arrange
+        Multiset_HashMapImpl<Integer> multiset = new Multiset_HashMapImpl<Integer>();
+        //act
+        int x = multiset.add(null); //0
+        x = multiset.add(null); //1
+        int y = multiset.add(null, 0); //2
+        int z = multiset.add(null, -2); //2
+        int last = multiset.add(null, -1); //2
+        //assert
+        int[] expected = {2, 2, 2};
+        int[] actual = {y, z, last};
+        assertArrayEquals(expected, actual);
+    }
+    //====================addAll(multiset)========================================
+    @Test
+    public void testAddAllMultiset_OtherNull() {
+        //Arrange
+        Multiset_HashMapImpl<Integer> ms1 = new Multiset_HashMapImpl<Integer>();
+        Multiset_HashMapImpl<Integer> ms2 = new Multiset_HashMapImpl<Integer>();
+        //Act
+        ms1.add(1);
+        ms1.add(2);
+        ms2 = null;
+        ms1.addAll(ms2);
+        //Assert
+        assertEquals(2, ms1.totalCount());
+    }
+
+    @Test
+    public void testAddAllMultiset_OtherEmpty() {
+        //Arrange
+        Multiset_HashMapImpl<Integer> ms1 = new Multiset_HashMapImpl<Integer>();
+        Multiset_HashMapImpl<Integer> ms2 = new Multiset_HashMapImpl<Integer>();
+        //Act
+        ms1.add(1);
+        ms1.add(2);
+        ms1.addAll(ms2);
+        //Assert
+        assertEquals(2, ms1.totalCount());
+    }
+
+    @Test
+    public void testAddAllMultiset_OtherNotEmptyAndPartiallyOverlaps() {
+        //Arrange
+        Multiset_HashMapImpl<Integer> ms1 = new Multiset_HashMapImpl<Integer>();
+        Multiset_HashMapImpl<Integer> ms2 = new Multiset_HashMapImpl<Integer>();
+        //Act
+        ms1.add(1);
+        ms1.add(2);
+        ms2.add(2);
+        ms2.add(4);
+        ms1.addAll(ms2);
+        //Assert
+        assertEquals(4, ms1.totalCount());
+        assertEquals(1, ms1.get(1).intValue());
+        assertEquals(2, ms1.get(2).intValue());
+        assertEquals(1, ms1.get(4).intValue());
+    }
+
+    @Test
+    public void testAddAllMultiset_OtherNotEmptyAndCompletelyOverlaps() {
+        //Arrange
+        Multiset_HashMapImpl<Integer> ms1 = new Multiset_HashMapImpl<Integer>();
+        Multiset_HashMapImpl<Integer> ms2 = new Multiset_HashMapImpl<Integer>();
+        //Act
+        ms1.add(1);
+        ms1.add(2);
+        ms2.add(1);
+        ms2.add(2);
+        ms1.addAll(ms2);
+        //Assert
+        assertEquals(4, ms1.totalCount());
+        assertEquals(2, ms1.get(1).intValue());
+        assertEquals(2, ms1.get(2).intValue());
+    }
+
+    @Test
+    public void testAddAllMultiset_OtherNotEmptyAndDistinct() {
+        //Arrange
+        Multiset_HashMapImpl<Integer> ms1 = new Multiset_HashMapImpl<Integer>();
+        Multiset_HashMapImpl<Integer> ms2 = new Multiset_HashMapImpl<Integer>();
+        //Act
+        ms1.add(1);
+        ms1.add(2);
+        ms2.add(3);
+        ms2.add(4);
+        ms2.add(5);
+        ms1.addAll(ms2);
+        //Assert
+        assertEquals(5, ms1.totalCount());
+        for (int i = 1; i <= 5; i++) {
+            assertEquals(1, ms1.get(i).intValue());
+        }
+    }
+    //====================addAll(colection)========================================
+    @Test
+    public void testAddAllCollection_NullInput() {
+        // arrange
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(5);
+        //act
+        Collection<Integer> c = null;
+        multiset.addAll(c);
+        //assert
+        assertEquals(1, multiset.size());
+    }
+
+    @Test
+    public void testAddAllCollection_NotNullAndEmpty() {
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(5);
+        Collection<Integer> c = new ArrayList<>();
+        multiset.addAll(c);
+        assertEquals(1, multiset.size());
+    }
+
+    @Test
+    public void testAddAllCollection_NotNullAndNotEmptyAndDistinct() {
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        Collection<Integer> c = new ArrayList<Integer>();
+        c.add(2);
+        c.add(4);
+        c.add(2);
+        multiset.addAll(c);
+        int[] expected = {3, 2, 1, 2};
+        int[] actual = {multiset.totalCount(), multiset.size(),(int)multiset.get(4),(int)multiset.get(2)};
+        assertArrayEquals(expected, actual);
+//        assertEquals(3, multiset.totalCount());
+//        assertEquals(2, multiset.size());
+//        assertEquals(1, multiset.get(4));
+//        assertEquals(2, multiset.get(2));
+    }
+
+    @Test
+    public void testAddAllCollection_NotNullAndNotEmptyAndPartiallyOverlapping() {
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(3);
+        multiset.add(2);
+
+        Collection<Integer> c = new ArrayList<Integer>();
+        c.add(2);
+        c.add(4);
+        c.add(3);
+        multiset.addAll(c);
+        int[] expected = {5, 3, 1, 2, 2};
+        int[] actual = {multiset.totalCount(), multiset.size(),(int)multiset.get(4),(int)multiset.get(2),(int)multiset.get(3)};
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void testAddAllCollection_NotNullAndNotEmptyAndFullyOverlapping() {
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(3);
+        multiset.add(2);
+        multiset.add(4);
+        Collection<Integer> c = new ArrayList<Integer>();
+        c.add(2);
+        c.add(4);
+        c.add(3);
+        multiset.addAll(c);
+        int[] expected = {6, 3, 2, 2, 2};
+        int[] actual = {multiset.totalCount(), multiset.size(),(int)multiset.get(4),(int)multiset.get(2),(int)multiset.get(3)};
+        assertArrayEquals(expected, actual);
+    }
+    //====================addAll(rawarray)========================================
+    @Test
+    public void testAddAllRawArray_NullInput() {
+        // arrange
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(5);
+        //act
+        Integer[] values = null;
+        multiset.addAll(values);
+        //assert
+        assertEquals(1, multiset.size());
+    }
+
+    @Test
+    public void testAddAllRawArray_NotNullAndEmpty() {
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(5);
+        multiset.add(2);
+        //act
+        Integer[] values = {};
+        multiset.addAll(values);
+        //assert
+        assertEquals(2, multiset.size());
+    }
+
+    @Test
+    public void testAddAllRawArray_NotNullAndNotEmptyAndDistinct() {
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(7);
+        multiset.add(8);
+        Integer[] values = {2,3,2};
+        multiset.addAll(values);
+
+        int[] expected = {5, 4, 1, 2};
+        int[] actual = {multiset.totalCount(), multiset.size(),(int)multiset.get(3),(int)multiset.get(2)};
+        assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testAddAllRawArray_NotNullAndNotEmptyAndPartiallyOverlapping() {
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(3);
+        multiset.add(2);
+
+        Integer[] values = {2,4,3};
+        multiset.addAll(values);
+
+        int[] expected = {5, 3, 1, 2, 2};
+        int[] actual = {multiset.totalCount(), multiset.size(),(int)multiset.get(4),(int)multiset.get(2),(int)multiset.get(3)};
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void testAddAllRawArray_NotNullAndNotEmptyAndFullyOverlapping() {
+        Multiset_HashMapImpl multiset = new Multiset_HashMapImpl<Integer>();
+        multiset.add(3);
+        multiset.add(2);
+        multiset.add(4);
+        Integer[] values = {2,4,3};
+        multiset.addAll(values);
+        int[] expected = {6, 3, 2, 2, 2};
+        int[] actual = {multiset.totalCount(), multiset.size(),(int)multiset.get(4),(int)multiset.get(2),(int)multiset.get(3)};
+        assertArrayEquals(expected, actual);
+    }
+    //===============================================================================================================================================
 
     // Remove(object) unit tests
     @Test
