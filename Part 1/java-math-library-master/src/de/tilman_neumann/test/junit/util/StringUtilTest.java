@@ -108,9 +108,9 @@ public class StringUtilTest extends ClassTest {
     @Test
     public void testLeftFormat_StringLength1_MaskLengthGreaterThan1() {
         // Arrange
-        String input = "abc";
+        String input = "a";
         String mask = "123456";
-        String expected = "abc456";
+        String expected = "a23456";
         // Act
         String result = StringUtil.formatLeft(input, mask);
         // Assert
@@ -188,9 +188,9 @@ public class StringUtilTest extends ClassTest {
     @Test
     public void testRightFormat_StringLength1_MaskLengthGreaterThan1() {
         // Arrange
-        String input = "abc";
+        String input = "a";
         String mask = "123456";
-        String expected = "123abc";
+        String expected = "12345a";
         // Act
         String result = StringUtil.formatRight(input, mask);
         // Assert
