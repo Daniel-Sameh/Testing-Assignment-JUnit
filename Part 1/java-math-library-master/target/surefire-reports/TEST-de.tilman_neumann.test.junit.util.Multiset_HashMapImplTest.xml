@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.134" tests="80" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.specification.version" value="22"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="d:\FCAI materials\Level 4 (Senior) Term 2\Software Testing &amp; Quality Assurance\Assignments\A1\Assignment 1\Part 1\java-math-library-master\target\test-classes;d:\FCAI materials\Level 4 (Senior) Term 2\Software Testing &amp; Quality Assurance\Assignments\A1\Assignment 1\Part 1\java-math-library-master\target\classes;C:\Users\Daniel Sameh\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Daniel Sameh\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Daniel Sameh\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Daniel Sameh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Daniel Sameh\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Daniel Sameh\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Daniel Sameh\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Africa/Cairo"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="22"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-22\bin"/>
+    <property name="sun.java.command" value="C:\Users\Daniel Sameh\AppData\Local\Temp\surefire5307001782473598315\surefirebooter-20260505210001301_3.jar C:\Users\Daniel Sameh\AppData\Local\Temp\surefire5307001782473598315 2026-05-05T20-59-58_569-jvmRun1 surefire-20260505210001301_1tmp surefire_0-20260505210001301_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="d:\FCAI materials\Level 4 (Senior) Term 2\Software Testing &amp; Quality Assurance\Assignments\A1\Assignment 1\Part 1\java-math-library-master\target\test-classes;d:\FCAI materials\Level 4 (Senior) Term 2\Software Testing &amp; Quality Assurance\Assignments\A1\Assignment 1\Part 1\java-math-library-master\target\classes;C:\Users\Daniel Sameh\.m2\repository\log4j\log4j\1.2.17\log4j-1.2.17.jar;C:\Users\Daniel Sameh\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Daniel Sameh\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Daniel Sameh\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Daniel Sameh\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Daniel Sameh\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Daniel Sameh\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Daniel Sameh"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-07-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-22"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="d:\FCAI materials\Level 4 (Senior) Term 2\Software Testing &amp; Quality Assurance\Assignments\A1\Assignment 1\Part 1\java-math-library-master"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Daniel Sameh\AppData\Local\Temp\surefire5307001782473598315\surefirebooter-20260505210001301_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="22.0.2+9-70"/>
+    <property name="user.name" value="Daniel Sameh"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Daniel Sameh\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\DANIEL~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="22.0.2"/>
+    <property name="user.dir" value="d:\FCAI materials\Level 4 (Senior) Term 2\Software Testing &amp; Quality Assurance\Assignments\A1\Assignment 1\Part 1\java-math-library-master"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Dart\dart-sdk\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Users\Daniel Sameh\AppData\Roaming\nvm;C:\Program Files\nodejs;E:\OpenBLAS-0.3.29_x64\bin;E:\OpenBLAS-0.3.29_x64\lib;;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Daniel Sameh\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Daniel Sameh\AppData\Local\Programs\Python\Python311\;C:\Users\Daniel Sameh\AppData\Local\Microsoft\WindowsApps;C:\Users\Daniel Sameh\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\Program Files\Dart\dart-sdk\bin;C:\Users\Daniel Sameh\flutter\bin;C:\msys64\mingw64\bin\;C:\Qt\6.6.0\mingw_64\bin\;C:\Program Files\Azure Data Studio\bin;C:\Users\Daniel Sameh\AppData\Local\GitHubDesktop\bin;C:\Users\Daniel Sameh\.dotnet\tools;C:\Users\Daniel Sameh\AppData\Local\Programs\Swift\bin;C:\Users\Daniel Sameh\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\Daniel Sameh\AppData\Local\Programs\mongosh\;C:\Users\Daniel Sameh\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\Daniel Sameh\AppData\Local\Programs\Ollama;C:\Users\Daniel Sameh\AppData\Local\Microsoft\WindowsApps;C:\Program Files\JetBrains\IntelliJ IDEA 2025.2.3\bin;D:\ffmpeg-2025-11-06-git-222127418b-essentials_build\bin;C:\Program Files\JetBrains\CLion 2025.2.4\bin;C:\Users\Daniel Sameh\AppData\Local\Python\bin;C:\Users\Daniel Sameh\AppData\Local\Programs\Antigravity\bin;C:\Users\Daniel Sameh\.local\bin;C:\Users\Daniel Sameh\AppData\Local\Microsoft\WinGet\Packages\BurntSushi.ripgrep.MSVC_Microsoft.Winget.Source_8wekyb3d8bbwe\ripgrep-15.1.0-x86_64-pc-windows-msvc;C:\Users\Daniel Sameh\AppData\Local\Microsoft\WinGet\Packages\sharkdp.fd_Microsoft.Winget.Source_8wekyb3d8bbwe\fd-v10.4.2-x86_64-pc-windows-msvc;C:\Users\Daniel Sameh\AppData\Local\Programs\Windsurf\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="22.0.2+9-70"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="66.0"/>
+  </properties>
+  <testcase name="testAddMult_NotNullAndExistsAndLTE0" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.006">
+    <system-out><![CDATA[2026-05-05 21:00:02,217 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddMult_NotNullAndExistsAndLTE0()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_KeyNotNull_PresentMultiple_RemoveZeroOrNegative" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.003">
+    <failure message="expected:&lt;3&gt; but was:&lt;4&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: expected:<3> but was:<4>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at junit.framework.Assert.assertEquals(Assert.java:241)
+	at junit.framework.TestCase.assertEquals(TestCase.java:384)
+	at de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_PresentMultiple_RemoveZeroOrNegative(Multiset_HashMapImplTest.java:543)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at junit.framework.TestCase.runTest(TestCase.java:177)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:130)
+	at de.tilman_neumann.test.junit.ClassTest.run(ClassTest.java:39)
+	at junit.framework.TestSuite.runTest(TestSuite.java:241)
+	at junit.framework.TestSuite.run(TestSuite.java:236)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[2026-05-05 21:00:02,223 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_PresentMultiple_RemoveZeroOrNegative()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_notNullObject_notMatchType" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,231 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_notNullObject_notMatchType()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_NullKey_PresentOnce_RemoveMoreThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.002">
+    <system-out><![CDATA[2026-05-05 21:00:02,232 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_NullKey_PresentOnce_RemoveMoreThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllCollection_NullInput" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.002">
+    <system-out><![CDATA[2026-05-05 21:00:02,234 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllCollection_NullInput()
+]]></system-out>
+  </testcase>
+  <testcase name="testEquals_notMultisetObject_returnsFalse" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,236 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testEquals_notMultisetObject_returnsFalse()
+]]></system-out>
+  </testcase>
+  <testcase name="testToList_oneElement_multiplicityOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,237 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToList_oneElement_multiplicityOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAdd_NullAndExists" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,239 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAdd_NullAndExists()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_KeyNotNull_NotPresent_RemoveMoreThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.002">
+    <system-out><![CDATA[2026-05-05 21:00:02,241 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_NotPresent_RemoveMoreThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllRawArray_NotNullAndNotEmptyAndFullyOverlapping" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,243 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllRawArray_NotNullAndNotEmptyAndFullyOverlapping()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_notNullObject_matchType_zeroMultiplicity" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,245 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_notNullObject_matchType_zeroMultiplicity()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemoveAll_KeyNull_NotPresent" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,246 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemoveAll_KeyNull_NotPresent()
+]]></system-out>
+  </testcase>
+  <testcase name="testToList_multipleElements_allMultiplicityGreaterThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.003">
+    <system-out><![CDATA[2026-05-05 21:00:02,248 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToList_multipleElements_allMultiplicityGreaterThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_KeyNotNull_PresentMultiple_RemoveOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,251 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_PresentMultiple_RemoveOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllMultiset_OtherNotEmptyAndDistinct" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,252 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllMultiset_OtherNotEmptyAndDistinct()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_notNullObject_MatchType_oneMultiplicity" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,254 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_notNullObject_MatchType_oneMultiplicity()
+]]></system-out>
+  </testcase>
+  <testcase name="testToString_multipleElements_allMultiplicityGreaterThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,254 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToString_multipleElements_allMultiplicityGreaterThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherEmpty_CurrentSizeGreater1" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,256 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherEmpty_CurrentSizeGreater1()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddMult_NullAndDoesNotExistAndGT0" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,259 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddMult_NullAndDoesNotExistAndGT0()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemoveAll_KeyNull_PresentOnce" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,262 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemoveAll_KeyNull_PresentOnce()
+]]></system-out>
+  </testcase>
+  <testcase name="testToString_emptyMultiset_returnsEmptyBraces" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,263 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToString_emptyMultiset_returnsEmptyBraces()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_KeyNotNull_PresentMultiple_RemoveMoreThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,265 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_PresentMultiple_RemoveMoreThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAdd_notNullAndDoesNotExist" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,267 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAdd_notNullAndDoesNotExist()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllCollection_NotNullAndNotEmptyAndDistinct" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,268 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllCollection_NotNullAndNotEmptyAndDistinct()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllRawArray_NotNullAndNotEmptyAndPartiallyOverlapping" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,270 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllRawArray_NotNullAndNotEmptyAndPartiallyOverlapping()
+]]></system-out>
+  </testcase>
+  <testcase name="testTotalCount_multipleElements_someMultiplicityGreaterThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,271 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testTotalCount_multipleElements_someMultiplicityGreaterThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testTotalCount_oneElement_multiplicityGreaterThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,272 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testTotalCount_oneElement_multiplicityGreaterThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemoveAll_KeyNull_PresentMultiple" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,273 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemoveAll_KeyNull_PresentMultiple()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllCollection_NotNullAndNotEmptyAndFullyOverlapping" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,276 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllCollection_NotNullAndNotEmptyAndFullyOverlapping()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherSize1_CurrentSizeGreater1_Overlap" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,277 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherSize1_CurrentSizeGreater1_Overlap()
+]]></system-out>
+  </testcase>
+  <testcase name="testToString_multipleElements_someMultiplicityGreaterThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,278 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToString_multipleElements_someMultiplicityGreaterThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherSizeGreater1_CurrentEmpty" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,279 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherSizeGreater1_CurrentEmpty()
+]]></system-out>
+  </testcase>
+  <testcase name="testEquals_sameKeysSameMultiplicities_returnsTrue" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,281 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testEquals_sameKeysSameMultiplicities_returnsTrue()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_KeyNotNull_PresentOnce_RemoveZeroOrNegative" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <failure message="expected:&lt;1&gt; but was:&lt;2&gt;" type="junit.framework.AssertionFailedError"><![CDATA[junit.framework.AssertionFailedError: expected:<1> but was:<2>
+	at junit.framework.Assert.fail(Assert.java:57)
+	at junit.framework.Assert.failNotEquals(Assert.java:329)
+	at junit.framework.Assert.assertEquals(Assert.java:78)
+	at junit.framework.Assert.assertEquals(Assert.java:234)
+	at junit.framework.Assert.assertEquals(Assert.java:241)
+	at junit.framework.TestCase.assertEquals(TestCase.java:384)
+	at de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_PresentOnce_RemoveZeroOrNegative(Multiset_HashMapImplTest.java:486)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at junit.framework.TestCase.runTest(TestCase.java:177)
+	at junit.framework.TestCase.runBare(TestCase.java:142)
+	at junit.framework.TestResult$1.protect(TestResult.java:122)
+	at junit.framework.TestResult.runProtected(TestResult.java:142)
+	at junit.framework.TestResult.run(TestResult.java:125)
+	at junit.framework.TestCase.run(TestCase.java:130)
+	at de.tilman_neumann.test.junit.ClassTest.run(ClassTest.java:39)
+	at junit.framework.TestSuite.runTest(TestSuite.java:241)
+	at junit.framework.TestSuite.run(TestSuite.java:236)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+	at org.junit.vintage.engine.execution.RunnerExecutor.execute(RunnerExecutor.java:42)
+	at org.junit.vintage.engine.VintageTestEngine.executeAllChildren(VintageTestEngine.java:80)
+	at org.junit.vintage.engine.VintageTestEngine.execute(VintageTestEngine.java:72)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86)
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[2026-05-05 21:00:02,282 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_PresentOnce_RemoveZeroOrNegative()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddMult_NullAndDoesNotExistAndLTE0" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,285 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddMult_NullAndDoesNotExistAndLTE0()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherSize1_CurrentEmpty" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,286 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherSize1_CurrentEmpty()
+]]></system-out>
+  </testcase>
+  <testcase name="testToList_multipleElements_allMultiplicityOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,289 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToList_multipleElements_allMultiplicityOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddMult_NotNullAndDoesNotExistAndGT0" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,291 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddMult_NotNullAndDoesNotExistAndGT0()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllCollection_NotNullAndNotEmptyAndPartiallyOverlapping" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,293 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllCollection_NotNullAndNotEmptyAndPartiallyOverlapping()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllMultiset_OtherEmpty" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,294 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllMultiset_OtherEmpty()
+]]></system-out>
+  </testcase>
+  <testcase name="testTotalCount_multipleElements_allMultiplicityOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.002">
+    <system-out><![CDATA[2026-05-05 21:00:02,295 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testTotalCount_multipleElements_allMultiplicityOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddMult_NotNullAndExistsAndGT0" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,297 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddMult_NotNullAndExistsAndGT0()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_NullKey_NotPresent_RemoveOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,299 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_NullKey_NotPresent_RemoveOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testHashCode_alwaysThrowsIllegalStateException" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,300 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testHashCode_alwaysThrowsIllegalStateException()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddMult_NotNullAndDoesNotExistAndLTE0" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,302 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddMult_NotNullAndDoesNotExistAndLTE0()
+]]></system-out>
+  </testcase>
+  <testcase name="testToList_emptyMultiset_returnsEmptyList" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,304 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToList_emptyMultiset_returnsEmptyList()
+]]></system-out>
+  </testcase>
+  <testcase name="testToList_multipleElements_someMultiplicityGreaterThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.002">
+    <system-out><![CDATA[2026-05-05 21:00:02,304 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToList_multipleElements_someMultiplicityGreaterThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllMultiset_OtherNotEmptyAndPartiallyOverlaps" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,307 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllMultiset_OtherNotEmptyAndPartiallyOverlaps()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddMult_NullAndExistsAndGT0" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,311 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddMult_NullAndExistsAndGT0()
+]]></system-out>
+  </testcase>
+  <testcase name="testAdd_notNullAndExists" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,313 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAdd_notNullAndExists()
+]]></system-out>
+  </testcase>
+  <testcase name="testEquals_sameKeysDifferentMultiplicities_returnsFalse" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,314 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testEquals_sameKeysDifferentMultiplicities_returnsFalse()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_nullObject" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,315 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_nullObject()
+]]></system-out>
+  </testcase>
+  <testcase name="testAdd_NullAndDoesNotExist" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,317 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAdd_NullAndDoesNotExist()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemoveAll_KeyNotNull_PresentMultiple" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,318 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemoveAll_KeyNotNull_PresentMultiple()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherNull_CurrentSizeGreater1" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,319 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherNull_CurrentSizeGreater1()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllRawArray_NotNullAndEmpty" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,321 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllRawArray_NotNullAndEmpty()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_KeyNotNull_NotPresent_RemoveOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,321 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_NotPresent_RemoveOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testEquals_differentKeys_returnsFalse" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,322 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testEquals_differentKeys_returnsFalse()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllRawArray_NotNullAndNotEmptyAndDistinct" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,323 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllRawArray_NotNullAndNotEmptyAndDistinct()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllRawArray_NullInput" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.002">
+    <system-out><![CDATA[2026-05-05 21:00:02,323 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllRawArray_NullInput()
+]]></system-out>
+  </testcase>
+  <testcase name="testTotalCount_emptyMultiset_returnsZero" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,325 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testTotalCount_emptyMultiset_returnsZero()
+]]></system-out>
+  </testcase>
+  <testcase name="testEquals_differentSize_returnsFalse" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,325 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testEquals_differentSize_returnsFalse()
+]]></system-out>
+  </testcase>
+  <testcase name="testToString_oneElement_multiplicityOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,326 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToString_oneElement_multiplicityOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_KeyNotNull_PresentOnce_RemoveMoreThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,328 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_PresentOnce_RemoveMoreThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemoveAll_KeyNotNull_NotPresent" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,329 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemoveAll_KeyNotNull_NotPresent()
+]]></system-out>
+  </testcase>
+  <testcase name="testEquals_nullObject_returnsFalse" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,330 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testEquals_nullObject_returnsFalse()
+]]></system-out>
+  </testcase>
+  <testcase name="testTotalCount_multipleElements_allMultiplicityGreaterThanOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,332 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testTotalCount_multipleElements_allMultiplicityGreaterThanOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllMultiset_OtherNotEmptyAndCompletelyOverlaps" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,333 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllMultiset_OtherNotEmptyAndCompletelyOverlaps()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherEmpty_CurrentSize1" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,334 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherEmpty_CurrentSize1()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllCollection_NotNullAndEmpty" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,335 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllCollection_NotNullAndEmpty()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherNull_CurrentEmpty" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,337 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherNull_CurrentEmpty()
+]]></system-out>
+  </testcase>
+  <testcase name="testTotalCount_oneElement_multiplicityOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,338 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testTotalCount_oneElement_multiplicityOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherNull_CurrentSize1" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,338 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherNull_CurrentSize1()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemoveAll_KeyNotNull_PresentOnce" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,341 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemoveAll_KeyNotNull_PresentOnce()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_notNullObject_MatchType_moreThanOneMultiplicity" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,342 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_notNullObject_MatchType_moreThanOneMultiplicity()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddMult_NullAndExistsAndLTE0" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,344 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddMult_NullAndExistsAndLTE0()
+]]></system-out>
+  </testcase>
+  <testcase name="testIntersect_OtherSizeGreater1_CurrentSize1_Overlap" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.001">
+    <system-out><![CDATA[2026-05-05 21:00:02,345 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testIntersect_OtherSizeGreater1_CurrentSize1_Overlap()
+]]></system-out>
+  </testcase>
+  <testcase name="testAddAllMultiset_OtherNull" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,346 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testAddAllMultiset_OtherNull()
+]]></system-out>
+  </testcase>
+  <testcase name="testRemove_KeyNotNull_PresentOnce_RemoveOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,347 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testRemove_KeyNotNull_PresentOnce_RemoveOne()
+]]></system-out>
+  </testcase>
+  <testcase name="testToString_multipleElements_allMultiplicityOne" classname="de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest" time="0.0">
+    <system-out><![CDATA[2026-05-05 21:00:02,348 INFO  ClassTest(38) [main]: Run de.tilman_neumann.test.junit.util.Multiset_HashMapImplTest.testToString_multipleElements_allMultiplicityOne()
+]]></system-out>
+  </testcase>
+</testsuite>
